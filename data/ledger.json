@@ -2,433 +2,201 @@
   {
     "id": "INV-001",
     "payer": "Lagos Central Pharmacy",
-    "amount": 485000,
+    "amount": 820000,
     "currency": "NGN",
-    "due_date": "2026-10-09",
+    "due_date": "2026-08-31",
     "status": "open",
-    "stage": 1,
-    "history": [
-      {
-        "at": "2026-10-10T19:44:03.890282+00:00",
-        "type": "message_sent",
-        "text": "Hello, this is a friendly first reminder about invoice INV-001 for 485,000 NGN, due 2026-10-09. Please let us know when payment will be made or if you need any documents."
-      },
-      {
-        "at": "2026-10-10T19:44:03.890282+00:00",
-        "type": "statement",
-        "text": "Could you please send us an updated statement of account?"
-      }
-    ]
+    "stage": 2,
+    "history": []
   },
   {
     "id": "INV-002",
     "payer": "Ikeja Family Clinic",
-    "amount": 1275000,
+    "amount": 1655000,
     "currency": "NGN",
-    "due_date": "2026-10-07",
-    "status": "paid",
-    "stage": 1,
-    "history": [
-      {
-        "at": "2026-10-10T19:44:03.890282+00:00",
-        "type": "message_sent",
-        "text": "Hello, this is a polite follow-up with a request for payment timing about invoice INV-002 for 1,275,000 NGN, due 2026-10-07. Please let us know when payment will be made or if you need any documents."
-      },
-      {
-        "at": "2026-10-10T19:44:03.890282+00:00",
-        "type": "paid",
-        "text": "Payment has been sent in full. Thank you."
-      }
-    ]
+    "due_date": "2026-10-09",
+    "status": "open",
+    "stage": 0,
+    "history": []
   },
   {
     "id": "INV-003",
     "payer": "Unity Diagnostics Lab",
-    "amount": 860000,
+    "amount": 1390000,
     "currency": "NGN",
-    "due_date": "2026-10-03",
-    "status": "promised",
-    "stage": 2,
-    "history": [
-      {
-        "at": "2026-10-10T19:44:03.890282+00:00",
-        "type": "message_sent",
-        "text": "Hello, this is a firm overdue reminder asking for a clear resolution date about invoice INV-003 for 860,000 NGN, due 2026-10-03. Please let us know when payment will be made or if you need any documents."
-      },
-      {
-        "at": "2026-10-10T19:44:03.890282+00:00",
-        "type": "promise",
-        "date": "2026-10-15",
-        "text": "We will settle this invoice by 2026-10-15."
-      },
-      {
-        "at": "2026-10-10T19:44:03.890282+00:00",
-        "type": "payment_promise",
-        "date": "2026-10-15"
-      }
-    ]
+    "due_date": "2026-09-25",
+    "status": "open",
+    "stage": 1,
+    "history": []
   },
   {
     "id": "INV-004",
     "payer": "Garden City Pharmacy",
-    "amount": 2340000,
+    "amount": 770000,
     "currency": "NGN",
-    "due_date": "2026-09-29",
-    "status": "paid",
-    "stage": 3,
-    "history": [
-      {
-        "at": "2026-10-10T19:44:03.890282+00:00",
-        "type": "message_sent",
-        "text": "Hello, this is a final escalation notice requesting immediate contact about invoice INV-004 for 2,340,000 NGN, due 2026-09-29. Please let us know when payment will be made or if you need any documents."
-      },
-      {
-        "at": "2026-10-10T19:44:03.890282+00:00",
-        "type": "paid",
-        "text": "Payment has been sent in full. Thank you."
-      }
-    ]
+    "due_date": "2026-10-02",
+    "status": "open",
+    "stage": 0,
+    "history": []
   },
   {
     "id": "INV-005",
     "payer": "Surulere Medical Clinic",
-    "amount": 392000,
+    "amount": 3040000,
     "currency": "NGN",
-    "due_date": "2026-10-10",
-    "status": "paid",
-    "stage": 0,
-    "history": [
-      {
-        "at": "2026-10-10T19:44:03.890282+00:00",
-        "type": "message_sent",
-        "text": "Hello, this is a friendly first reminder about invoice INV-005 for 392,000 NGN, due 2026-10-10. Please let us know when payment will be made or if you need any documents."
-      },
-      {
-        "at": "2026-10-10T19:44:03.890282+00:00",
-        "type": "paid",
-        "text": "Payment has been sent in full. Thank you."
-      }
-    ]
+    "due_date": "2026-08-28",
+    "status": "open",
+    "stage": 2,
+    "history": []
   },
   {
     "id": "INV-006",
     "payer": "Northstar Pathology Lab",
-    "amount": 1580000,
+    "amount": 3270000,
     "currency": "NGN",
-    "due_date": "2026-10-01",
+    "due_date": "2026-10-05",
     "status": "open",
-    "stage": 3,
-    "history": [
-      {
-        "at": "2026-10-10T19:44:03.890282+00:00",
-        "type": "message_sent",
-        "text": "Hello, this is a firm overdue reminder asking for a clear resolution date about invoice INV-006 for 1,580,000 NGN, due 2026-10-01. Please let us know when payment will be made or if you need any documents."
-      },
-      {
-        "at": "2026-10-10T19:44:03.890282+00:00",
-        "type": "statement",
-        "text": "Could you please send us an updated statement of account?"
-      }
-    ]
+    "stage": 0,
+    "history": []
   },
   {
     "id": "INV-007",
     "payer": "Kano Wellness Pharmacy",
-    "amount": 645000,
+    "amount": 410000,
     "currency": "NGN",
-    "due_date": "2026-09-24",
-    "status": "disputed",
-    "stage": 3,
-    "history": [
-      {
-        "at": "2026-10-10T19:44:03.890282+00:00",
-        "type": "message_sent",
-        "text": "Hello, this is a final escalation notice requesting immediate contact about invoice INV-007 for 645,000 NGN, due 2026-09-24. Please let us know when payment will be made or if you need any documents."
-      },
-      {
-        "at": "2026-10-10T19:44:03.890282+00:00",
-        "type": "dispute",
-        "text": "Our records show a different amount. Please review the invoice."
-      }
-    ]
+    "due_date": "2026-09-13",
+    "status": "open",
+    "stage": 1,
+    "history": []
   },
   {
     "id": "INV-008",
     "payer": "Riverside Women's Clinic",
-    "amount": 920000,
+    "amount": 725000,
     "currency": "NGN",
-    "due_date": "2026-10-06",
-    "status": "disputed",
-    "stage": 1,
-    "history": [
-      {
-        "at": "2026-10-10T19:44:03.890282+00:00",
-        "type": "message_sent",
-        "text": "Hello, this is a polite follow-up with a request for payment timing about invoice INV-008 for 920,000 NGN, due 2026-10-06. Please let us know when payment will be made or if you need any documents."
-      },
-      {
-        "at": "2026-10-10T19:44:03.890282+00:00",
-        "type": "dispute",
-        "text": "Our records show a different amount. Please review the invoice."
-      }
-    ]
+    "due_date": "2026-10-09",
+    "status": "open",
+    "stage": 0,
+    "history": []
   },
   {
     "id": "INV-009",
     "payer": "Beacon Clinical Laboratory",
-    "amount": 3125000,
+    "amount": 1440000,
     "currency": "NGN",
-    "due_date": "2026-09-18",
-    "status": "paid",
-    "stage": 3,
-    "history": [
-      {
-        "at": "2026-10-10T19:44:03.890282+00:00",
-        "type": "message_sent",
-        "text": "Hello, this is a final escalation notice requesting immediate contact about invoice INV-009 for 3,125,000 NGN, due 2026-09-18. Please let us know when payment will be made or if you need any documents."
-      },
-      {
-        "at": "2026-10-10T19:44:03.890282+00:00",
-        "type": "paid",
-        "text": "Payment has been sent in full. Thank you."
-      }
-    ]
+    "due_date": "2026-09-27",
+    "status": "open",
+    "stage": 0,
+    "history": []
   },
   {
     "id": "INV-010",
     "payer": "Yaba Community Pharmacy",
-    "amount": 278000,
+    "amount": 3330000,
     "currency": "NGN",
-    "due_date": "2026-10-08",
-    "status": "paid",
-    "stage": 0,
-    "history": [
-      {
-        "at": "2026-10-10T19:44:03.890282+00:00",
-        "type": "message_sent",
-        "text": "Hello, this is a friendly first reminder about invoice INV-010 for 278,000 NGN, due 2026-10-08. Please let us know when payment will be made or if you need any documents."
-      },
-      {
-        "at": "2026-10-10T19:44:03.890282+00:00",
-        "type": "paid",
-        "text": "Payment has been sent in full. Thank you."
-      }
-    ]
+    "due_date": "2026-09-08",
+    "status": "open",
+    "stage": 2,
+    "history": []
   },
   {
     "id": "INV-011",
     "payer": "Ibadan Hope Clinic",
-    "amount": 1130000,
+    "amount": 3120000,
     "currency": "NGN",
-    "due_date": "2026-10-04",
-    "status": "paid",
-    "stage": 1,
-    "history": [
-      {
-        "at": "2026-10-10T19:44:03.890282+00:00",
-        "type": "message_sent",
-        "text": "Hello, this is a polite follow-up with a request for payment timing about invoice INV-011 for 1,130,000 NGN, due 2026-10-04. Please let us know when payment will be made or if you need any documents."
-      },
-      {
-        "at": "2026-10-10T19:44:03.890282+00:00",
-        "type": "paid",
-        "text": "Payment has been sent in full. Thank you."
-      }
-    ]
+    "due_date": "2026-10-09",
+    "status": "open",
+    "stage": 0,
+    "history": []
   },
   {
     "id": "INV-012",
     "payer": "PrimeCare Diagnostics",
-    "amount": 1945000,
+    "amount": 3040000,
     "currency": "NGN",
-    "due_date": "2026-09-27",
-    "status": "disputed",
-    "stage": 2,
-    "history": [
-      {
-        "at": "2026-10-10T19:44:03.890282+00:00",
-        "type": "message_sent",
-        "text": "Hello, this is a firm overdue reminder asking for a clear resolution date about invoice INV-012 for 1,945,000 NGN, due 2026-09-27. Please let us know when payment will be made or if you need any documents."
-      },
-      {
-        "at": "2026-10-10T19:44:03.890282+00:00",
-        "type": "dispute",
-        "text": "Our records show a different amount. Please review the invoice."
-      }
-    ]
+    "due_date": "2026-09-28",
+    "status": "open",
+    "stage": 0,
+    "history": []
   },
   {
     "id": "INV-013",
     "payer": "Abuja HealthPlus Pharmacy",
-    "amount": 735000,
+    "amount": 1375000,
     "currency": "NGN",
-    "due_date": "2026-10-02",
-    "status": "disputed",
-    "stage": 2,
-    "history": [
-      {
-        "at": "2026-10-10T19:44:03.890282+00:00",
-        "type": "message_sent",
-        "text": "Hello, this is a firm overdue reminder asking for a clear resolution date about invoice INV-013 for 735,000 NGN, due 2026-10-02. Please let us know when payment will be made or if you need any documents."
-      },
-      {
-        "at": "2026-10-10T19:44:03.890282+00:00",
-        "type": "dispute",
-        "text": "Our records show a different amount. Please review the invoice."
-      }
-    ]
+    "due_date": "2026-09-14",
+    "status": "open",
+    "stage": 1,
+    "history": []
   },
   {
     "id": "INV-014",
     "payer": "Lekki Specialist Clinic",
-    "amount": 2670000,
+    "amount": 3265000,
     "currency": "NGN",
-    "due_date": "2026-09-15",
+    "due_date": "2026-09-12",
     "status": "open",
-    "stage": 3,
-    "history": [
-      {
-        "at": "2026-10-10T19:44:03.890282+00:00",
-        "type": "message_sent",
-        "text": "Hello, this is a final escalation notice requesting immediate contact about invoice INV-014 for 2,670,000 NGN, due 2026-09-15. Please let us know when payment will be made or if you need any documents."
-      },
-      {
-        "at": "2026-10-10T19:44:03.890282+00:00",
-        "type": "statement",
-        "text": "Could you please send us an updated statement of account?"
-      }
-    ]
+    "stage": 1,
+    "history": []
   },
   {
     "id": "INV-015",
     "payer": "Kaduna Reference Lab",
-    "amount": 548000,
+    "amount": 280000,
     "currency": "NGN",
-    "due_date": "2026-10-09",
+    "due_date": "2026-09-23",
     "status": "open",
     "stage": 1,
-    "history": [
-      {
-        "at": "2026-10-10T19:44:03.890282+00:00",
-        "type": "message_sent",
-        "text": "Hello, this is a friendly first reminder about invoice INV-015 for 548,000 NGN, due 2026-10-09. Please let us know when payment will be made or if you need any documents."
-      },
-      {
-        "at": "2026-10-10T19:44:03.890282+00:00",
-        "type": "statement",
-        "text": "Could you please send us an updated statement of account?"
-      }
-    ]
+    "history": []
   },
   {
     "id": "INV-016",
     "payer": "Enugu City Pharmacy",
-    "amount": 1410000,
+    "amount": 1065000,
     "currency": "NGN",
-    "due_date": "2026-09-30",
-    "status": "promised",
-    "stage": 1,
-    "history": [
-      {
-        "at": "2026-10-10T19:44:03.890282+00:00",
-        "type": "message_sent",
-        "text": "Hello, this is a polite follow-up with a request for payment timing about invoice INV-016 for 1,410,000 NGN, due 2026-09-30. Please let us know when payment will be made or if you need any documents."
-      },
-      {
-        "at": "2026-10-10T19:44:03.890282+00:00",
-        "type": "promise",
-        "date": "2026-10-19",
-        "text": "We will settle this invoice by 2026-10-19."
-      },
-      {
-        "at": "2026-10-10T19:44:03.890282+00:00",
-        "type": "payment_promise",
-        "date": "2026-10-19"
-      }
-    ]
+    "due_date": "2026-08-23",
+    "status": "open",
+    "stage": 3,
+    "history": []
   },
   {
     "id": "INV-017",
     "payer": "Mainland Paediatric Clinic",
-    "amount": 985000,
+    "amount": 2410000,
     "currency": "NGN",
-    "due_date": "2026-09-21",
-    "status": "disputed",
-    "stage": 3,
-    "history": [
-      {
-        "at": "2026-10-10T19:44:03.890282+00:00",
-        "type": "message_sent",
-        "text": "Hello, this is a final escalation notice requesting immediate contact about invoice INV-017 for 985,000 NGN, due 2026-09-21. Please let us know when payment will be made or if you need any documents."
-      },
-      {
-        "at": "2026-10-10T19:44:03.890282+00:00",
-        "type": "dispute",
-        "text": "Our records show a different amount. Please review the invoice."
-      }
-    ]
+    "due_date": "2026-08-27",
+    "status": "open",
+    "stage": 2,
+    "history": []
   },
   {
     "id": "INV-018",
     "payer": "Cedar Medical Testing Lab",
-    "amount": 2210000,
+    "amount": 1670000,
     "currency": "NGN",
-    "due_date": "2026-09-26",
+    "due_date": "2026-09-19",
     "status": "open",
-    "stage": 2,
-    "history": [
-      {
-        "at": "2026-10-10T19:44:03.890282+00:00",
-        "type": "message_sent",
-        "text": "Hello, this is a firm overdue reminder asking for a clear resolution date about invoice INV-018 for 2,210,000 NGN, due 2026-09-26. Please let us know when payment will be made or if you need any documents."
-      },
-      {
-        "at": "2026-10-10T19:44:03.890282+00:00",
-        "type": "silent",
-        "text": ""
-      }
-    ]
+    "stage": 1,
+    "history": []
   },
   {
     "id": "INV-019",
     "payer": "Jos Sunrise Pharmacy",
-    "amount": 420000,
+    "amount": 1350000,
     "currency": "NGN",
-    "due_date": "2026-10-05",
-    "status": "paid",
-    "stage": 1,
-    "history": [
-      {
-        "at": "2026-10-10T19:44:03.890282+00:00",
-        "type": "message_sent",
-        "text": "Hello, this is a polite follow-up with a request for payment timing about invoice INV-019 for 420,000 NGN, due 2026-10-05. Please let us know when payment will be made or if you need any documents."
-      },
-      {
-        "at": "2026-10-10T19:44:03.890282+00:00",
-        "type": "paid",
-        "text": "Payment has been sent in full. Thank you."
-      }
-    ]
+    "due_date": "2026-10-01",
+    "status": "open",
+    "stage": 0,
+    "history": []
   },
   {
     "id": "INV-020",
     "payer": "Abeokuta General Clinic",
-    "amount": 1760000,
+    "amount": 1970000,
     "currency": "NGN",
-    "due_date": "2026-09-12",
+    "due_date": "2026-08-23",
     "status": "open",
     "stage": 3,
-    "history": [
-      {
-        "at": "2026-10-10T19:44:03.890282+00:00",
-        "type": "message_sent",
-        "text": "Hello, this is a final escalation notice requesting immediate contact about invoice INV-020 for 1,760,000 NGN, due 2026-09-12. Please let us know when payment will be made or if you need any documents."
-      },
-      {
-        "at": "2026-10-10T19:44:03.890282+00:00",
-        "type": "silent",
-        "text": ""
-      }
-    ]
+    "history": []
   }
 ]
