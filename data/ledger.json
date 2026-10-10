@@ -1,0 +1,22 @@
+[
+  {"id":"INV-001","payer":"Lagos Central Pharmacy","amount":485000,"currency":"NGN","due_date":"2026-10-09","status":"open","stage":0,"history":[]},
+  {"id":"INV-002","payer":"Ikeja Family Clinic","amount":1275000,"currency":"NGN","due_date":"2026-10-07","status":"open","stage":1,"history":[]},
+  {"id":"INV-003","payer":"Unity Diagnostics Lab","amount":860000,"currency":"NGN","due_date":"2026-10-03","status":"open","stage":2,"history":[]},
+  {"id":"INV-004","payer":"Garden City Pharmacy","amount":2340000,"currency":"NGN","due_date":"2026-09-29","status":"open","stage":3,"history":[]},
+  {"id":"INV-005","payer":"Surulere Medical Clinic","amount":392000,"currency":"NGN","due_date":"2026-10-10","status":"open","stage":0,"history":[]},
+  {"id":"INV-006","payer":"Northstar Pathology Lab","amount":1580000,"currency":"NGN","due_date":"2026-10-01","status":"open","stage":2,"history":[]},
+  {"id":"INV-007","payer":"Kano Wellness Pharmacy","amount":645000,"currency":"NGN","due_date":"2026-09-24","status":"open","stage":3,"history":[]},
+  {"id":"INV-008","payer":"Riverside Women's Clinic","amount":920000,"currency":"NGN","due_date":"2026-10-06","status":"open","stage":1,"history":[]},
+  {"id":"INV-009","payer":"Beacon Clinical Laboratory","amount":3125000,"currency":"NGN","due_date":"2026-09-18","status":"open","stage":3,"history":[]},
+  {"id":"INV-010","payer":"Yaba Community Pharmacy","amount":278000,"currency":"NGN","due_date":"2026-10-08","status":"open","stage":0,"history":[]},
+  {"id":"INV-011","payer":"Ibadan Hope Clinic","amount":1130000,"currency":"NGN","due_date":"2026-10-04","status":"open","stage":1,"history":[]},
+  {"id":"INV-012","payer":"PrimeCare Diagnostics","amount":1945000,"currency":"NGN","due_date":"2026-09-27","status":"open","stage":2,"history":[]},
+  {"id":"INV-013","payer":"Abuja HealthPlus Pharmacy","amount":735000,"currency":"NGN","due_date":"2026-10-02","status":"open","stage":2,"history":[]},
+  {"id":"INV-014","payer":"Lekki Specialist Clinic","amount":2670000,"currency":"NGN","due_date":"2026-09-15","status":"open","stage":3,"history":[]},
+  {"id":"INV-015","payer":"Kaduna Reference Lab","amount":548000,"currency":"NGN","due_date":"2026-10-09","status":"open","stage":0,"history":[]},
+  {"id":"INV-016","payer":"Enugu City Pharmacy","amount":1410000,"currency":"NGN","due_date":"2026-09-30","status":"open","stage":1,"history":[]},
+  {"id":"INV-017","payer":"Mainland Paediatric Clinic","amount":985000,"currency":"NGN","due_date":"2026-09-21","status":"open","stage":3,"history":[]},
+  {"id":"INV-018","payer":"Cedar Medical Testing Lab","amount":2210000,"currency":"NGN","due_date":"2026-09-26","status":"open","stage":2,"history":[]},
+  {"id":"INV-019","payer":"Jos Sunrise Pharmacy","amount":420000,"currency":"NGN","due_date":"2026-10-05","status":"open","stage":1,"history":[]},
+  {"id":"INV-020","payer":"Abeokuta General Clinic","amount":1760000,"currency":"NGN","due_date":"2026-09-12","status":"open","stage":3,"history":[]}
+]
