@@ -72,6 +72,10 @@ def run(offline: bool = False) -> dict:
                 error = str(exc)
                 invoice["history"].append({"at": now, "type": "budget_stop", "reason": error})
                 break
+            except Exception as exc:
+                error = f"{type(exc).__name__}: {exc}"
+                invoice["history"].append({"at": now, "type": "run_error", "reason": error})
+                break
             finally:
                 total_calls += per_invoice["calls"]
                 invoice["llm_usage"] = per_invoice
@@ -81,7 +85,7 @@ def run(offline: bool = False) -> dict:
     partial = [entry for inv in invoices for entry in inv["history"] if entry.get("type") == "partial_payment"]
     recovered = sum(inv["amount"] for inv in paid) + sum(entry["amount"] for entry in partial)
     run_cost = sum(inv.get("llm_usage", {}).get("cost_usd", 0.0) for inv in invoices)
-    trace_link = f"https://app.neatlogs.com/traces/{trace_id}"
+    trace_link = f"https://neatlogs.com/traces/{trace_id}"
     result = {
         "run_at": now,
         "seed": int(os.getenv("CHASER_SEED", SEED)),
@@ -101,6 +105,10 @@ def run(offline: bool = False) -> dict:
     }
     RUN_LEDGER.write_text(json.dumps(invoices, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
     RUN_RECORD.write_text(json.dumps(result, indent=2) + "\n", encoding="utf-8")
+    if offline:
+        (ROOT / "state" / "offline_baseline.json").write_text(json.dumps(result, indent=2) + "\n", encoding="utf-8")
+    else:
+        (ROOT / "state" / "llm_baseline.json").write_text(json.dumps(result, indent=2) + "\n", encoding="utf-8")
     neatlogs.flush()
     neatlogs.shutdown()
     print(json.dumps(result, indent=2))

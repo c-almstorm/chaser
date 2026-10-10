@@ -13,6 +13,7 @@ from openai import OpenAI
 
 ROOT = Path(__file__).resolve().parents[1]
 CACHE_PATH = ROOT / "state" / "llm_cache.json"
+SPEND_PATH = ROOT / "state" / "llm_spend.json"
 BUDGET_USD = 12.0
 INTENTS = {"promise", "dispute", "info_request", "paid", "silent"}
 
@@ -40,12 +41,11 @@ class LLM:
                 api_key=key,
                 base_url=os.getenv("LITELLM_BASE_URL", "https://litellm.ai/neatlogs/v1"),
             )
-            try:
-                import neatlogs
-                self.client = neatlogs.wrap(client)
-            except Exception:
-                self.client = client
+            import neatlogs
+            self.client = neatlogs.wrap(client)
         self.cache = json.loads(CACHE_PATH.read_text(encoding="utf-8")) if CACHE_PATH.exists() else {}
+        spend = json.loads(SPEND_PATH.read_text(encoding="utf-8")) if SPEND_PATH.exists() else {}
+        self.cumulative_cost = float(spend.get("cumulative_cost_usd", 0.0))
         self.run_cost = 0.0
 
     def _complete(self, role: str, messages: list[dict], max_tokens: int, invoice_cost: dict) -> tuple[str, dict]:
@@ -53,7 +53,7 @@ class LLM:
             raise RuntimeError("Offline mode does not make completion calls")
         model = os.getenv(
             "LITELLM_DRAFT_MODEL" if role == "draft" else "LITELLM_CLASSIFY_MODEL",
-            "anthropic/claude-3-5-sonnet-latest" if role == "draft" else "anthropic/claude-3-5-haiku-latest",
+            "anthropic/claude-sonnet-5" if role == "draft" else "anthropic/claude-haiku-5-5",
         )
         key = hashlib.sha256(json.dumps([model, messages], sort_keys=True).encode()).hexdigest()
         if key in self.cache:
@@ -62,12 +62,12 @@ class LLM:
             invoice_cost["cache_hits"] += 1
             return cached["text"], usage
 
-        input_rate = _rate("LITELLM_DRAFT_INPUT_USD_PER_1M" if role == "draft" else "LITELLM_CLASSIFY_INPUT_USD_PER_1M", "3" if role == "draft" else "0.8")
-        output_rate = _rate("LITELLM_DRAFT_OUTPUT_USD_PER_1M" if role == "draft" else "LITELLM_CLASSIFY_OUTPUT_USD_PER_1M", "15" if role == "draft" else "4")
-        input_estimate = max(1, len(json.dumps(messages)) // 3)
+        input_rate = _rate("LITELLM_DRAFT_INPUT_USD_PER_1M" if role == "draft" else "LITELLM_CLASSIFY_INPUT_USD_PER_1M", "2" if role == "draft" else "0.1")
+        output_rate = _rate("LITELLM_DRAFT_OUTPUT_USD_PER_1M" if role == "draft" else "LITELLM_CLASSIFY_OUTPUT_USD_PER_1M", "10" if role == "draft" else "0.5")
+        input_estimate = max(1, len(json.dumps(messages)) // 2)
         reserve = input_estimate * input_rate + max_tokens * output_rate
-        if self.run_cost + reserve > BUDGET_USD:
-            raise BudgetExceeded(f"Request would exceed the $12.00 run budget (spent ${self.run_cost:.4f})")
+        if self.cumulative_cost + reserve > BUDGET_USD:
+            raise BudgetExceeded(f"Request would exceed the cumulative $12.00 budget (spent ${self.cumulative_cost:.4f})")
 
         response = self.client.chat.completions.create(
             model=model,
@@ -79,9 +79,11 @@ class LLM:
         input_tokens = int(response.usage.prompt_tokens if response.usage else input_estimate)
         output_tokens = int(response.usage.completion_tokens if response.usage else max_tokens)
         cost = input_tokens * input_rate + output_tokens * output_rate
-        if self.run_cost + cost > BUDGET_USD:
-            raise BudgetExceeded("Actual completion cost crossed the $12.00 run budget; stopping immediately")
+        if self.cumulative_cost + cost > BUDGET_USD:
+            raise BudgetExceeded("Actual completion cost crossed the cumulative $12.00 budget; stopping immediately")
+        self.cumulative_cost += cost
         self.run_cost += cost
+        SPEND_PATH.write_text(json.dumps({"cumulative_cost_usd": round(self.cumulative_cost, 8)}, indent=2) + "\n", encoding="utf-8")
         usage = {"input_tokens": input_tokens, "output_tokens": output_tokens, "cost_usd": cost, "cached": False}
         invoice_cost["calls"] += 1
         invoice_cost["input_tokens"] += input_tokens

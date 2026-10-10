@@ -36,7 +36,7 @@ def run() -> dict:
         "estimated_cost_usd": 0.0,
         "cost_per_invoice_usd": 0.0,
         "trace_id": trace_id,
-        "trace_link": f"https://app.neatlogs.com/traces/{trace_id}",
+        "trace_link": f"https://neatlogs.com/traces/{trace_id}",
     }
     OUT.write_text(json.dumps(result, indent=2) + "\n", encoding="utf-8")
     neatlogs.flush()
