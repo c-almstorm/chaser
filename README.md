@@ -22,8 +22,11 @@ The baseline selects an open invoice, drafts a stage-specific reminder, sends it
 
 ## Run record
 
-- Neatlogs trace: pending credentials; set `NEATLOGS_API_KEY` and rerun to export a trace.
-- Score: pending baseline run.
+- Neatlogs trace: not exported. `NEATLOGS_API_KEY` was unavailable during this run, so the SDK initialized locally but no dashboard trace URL was produced.
+- Baseline run: 2026-10-10; 20 invoices processed; 7 fully resolved; NGN 8,960,000 recovered (includes partial payments); 0 LLM calls; estimated cost USD 0.000000 per invoice.
+- Machine-readable run record: [`state/last_run.json`](state/last_run.json).
+
+To export and save a dashboard trace link, configure `NEATLOGS_API_KEY` and rerun `python -m sim.baseline`; the simulator seed is fixed for repeatable outcomes.
 
 ## Checkpoints
 

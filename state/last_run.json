@@ -1,0 +1,9 @@
+{
+  "run_at": "2026-10-10T19:44:03.890282+00:00",
+  "invoices_total": 20,
+  "resolved_invoices": 7,
+  "recovered_ngn": 8960000,
+  "llm_calls": 0,
+  "estimated_cost_usd": 0.0,
+  "trace_link": null
+}
